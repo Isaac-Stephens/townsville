@@ -1,2 +1,2 @@
 # townsville
-My personal Talos Linux Kubernetes cluster config.
+My personal openSUSE MicroOS Kubernetes cluster config.
