@@ -1,0 +1,133 @@
+# ============================================================
+# Personal
+# ============================================================
+
+notes/*
+
+# ============================================================
+# Kubernetes
+# ============================================================
+
+# Kubernetes credentials
+kubeconfig
+kubeconfig.*
+*.kubeconfig
+.kube/
+
+# Kubernetes secrets / credentials
+secrets/
+*.secret
+*.secrets
+*.key
+*.pem
+*.crt
+*.p12
+*.pfx
+
+# Generated Kubernetes manifests
+generated/
+rendered/
+
+# Helm
+.helm/
+charts/*/charts/
+charts/*/tmp/
+
+# ============================================================
+# Infrastructure / Machine State
+# ============================================================
+
+# Terraform
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+
+# Ansible
+*.retry
+.vault_password
+vault-password
+vault_pass
+
+# ============================================================
+# Environment / Local Configuration
+# ============================================================
+
+.env
+.env.*
+!.env.example
+
+# Local overrides
+config.local.*
+*.local
+
+# SSH
+.ssh/
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+known_hosts
+
+# ============================================================
+# Certificates / TLS
+# ============================================================
+
+*.csr
+*.key
+*.pem
+*.p12
+*.pfx
+
+# ============================================================
+# Logs
+# ============================================================
+
+*.log
+logs/
+
+# ============================================================
+# OS / Editor
+# ============================================================
+
+.DS_Store
+Thumbs.db
+
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ============================================================
+# Temporary / Generated Files
+# ============================================================
+
+tmp/
+temp/
+.cache/
+*.tmp
+*.bak
+
+# ============================================================
+# Python
+# ============================================================
+
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+ENV/
+.pytest_cache/
+.mypy_cache/
+
+# ============================================================
+# Node / Web tooling
+# ============================================================
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
