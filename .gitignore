@@ -55,7 +55,7 @@ vault_pass
 # Environment / Local Configuration
 # ============================================================
 
-.env
+*.env
 .env.*
 !.env.example
 
