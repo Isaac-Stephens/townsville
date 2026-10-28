@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: mediaMaps
+  namespace: mediaMaps
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mediaMaps
+
+  template:
+    metadata:
+      labels:
+        app: mediaMaps
+
+    spec:
+      imagePullSecrets:
+        - name: ghcr-credentials
+
+      containers:
+        - name: mediaMaps
+          image: ghcr.io/kalelsonger/florgropuli@sha256:a5ea529f14029a2f64f05c781a02fa503bb7183e564d39c8f765e5e04a1163a2

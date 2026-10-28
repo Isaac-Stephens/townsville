@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Namespace
+
+metadata:
+  name: mediaMaps
+  labels:
+    app.kubernetes.io/name: mediaMaps
+    app.kubernetes.io/part-of: florgropuli
+    app.kubernetes.io/managed-by: flux
