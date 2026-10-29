@@ -23,3 +23,11 @@ spec:
       containers:
         - name: mediamaps
           image: ghcr.io/kalelsonger/florgropuli@sha256:a5ea529f14029a2f64f05c781a02fa503bb7183e564d39c8f765e5e04a1163a2
+          ports:
+            - containerPort: 8000
+          env:
+            - name: SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: mediamaps-secrets
+                  key: SECRET_KEY
