@@ -36,8 +36,6 @@ spec:
                 secretKeyRef:
                   name: pihole-secrets
                   key: WEBPASSWORD
-            - name: FTLCONF_dns_upstreams
-              value: "1.1.1.1:1.0.0.1"
 
           ports:
             - name: dns-tcp
