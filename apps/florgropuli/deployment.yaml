@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: florgropuli
+  namespace: florgropuli
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: florgropuli
+
+  template:
+    metadata:
+      labels:
+        app: florgropuli
+
+    spec:
+      imagePullSecrets:
+        - name: ghcr-credentials
+
+      containers:
+        - name: florgropuli
+          image: ghcr.io/florgropuli-evil-incorporated/florgropuli.com:sha-48b45f3dff42928ea1118800ec0b3794d9e9c425
+          ports:
+            - containerPort: 8000
+          env:
+            - name: SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: florgropuli-secrets
+                  key: SECRET_KEY
