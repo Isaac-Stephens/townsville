@@ -5,3 +5,4 @@ resources:
   - ./controllers/cloudflared
   - ./controllers/headlamp
   - ./controllers/tailscale
+  - ./controllers/pihole

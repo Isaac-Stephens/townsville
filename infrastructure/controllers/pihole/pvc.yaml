@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+
+metadata:
+  name: pihole
+  namespace: pihole
+  labels:
+    app.kubernetes.io/name: pihole
+    app.kubernetes.io/part-of: townsville
+
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
